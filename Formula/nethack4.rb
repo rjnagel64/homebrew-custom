@@ -28,7 +28,10 @@ class Nethack4 < Formula
 
     mkdir "build"
     cd "build" do
-      system "../aimake", "--with=jansson", "--without=gui",
+      system "../aimake",
+		"--with=jansson",
+		"--with=gui",
+		# "--without=gui",
         "-i", prefix, "--directory-layout=prefix",
         "--override-directory", "staterootdir=#{var}"
     end
