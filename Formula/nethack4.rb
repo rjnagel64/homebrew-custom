@@ -15,11 +15,13 @@ class Nethack4 < Formula
     # sha256 "2dcacbd514524bcac4c52df5c334f5b23e065f01371f6777b001ce8a1826df17" => :yosemite
   # end
 
+  ## This causes an error in recent homebrew versions. Since I am the only
+  ## one compiling this, I don't care about this warning.
   # Assumes C11 _Noreturn is available for clang:
   # https://roguelikes.live/nh4-bugzilla/show_bug.cgi?id=568
-  fails_with :clang do
-    build 425
-  end
+  ## fails_with :clang do
+    ## build 425
+  ## end
 
   def install
     # 'find_default_dynamic_libraries' failed on 10.11 and 10.12:
